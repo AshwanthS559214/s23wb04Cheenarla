@@ -4,15 +4,15 @@ block content
   h1= title
   p Welcome back to #{title} modifed by Ashwanth Reddy Cheemarla
 
-  - results = [{ NIKE: "Shoes", size: "large", cost: 3000 },{ NIKE: "Slides", size: "med", cost: 2400 },{ NIKE: "Belt", size: "small", cost: 1080 }];
+  - results = [{ nike: "Shoes", size: "large", cost: 3000 },{ nike: "Slides", size: "med", cost: 2400 },{ nike: "Belt", size: "small", cost: 1080 }];
   div.container-fluid 
     -
     div.row 
     -
     each item, index in results
         div.col-sm-6
-            h2= item.NIKE
-            p= item.NIKE_size 
+            h2= item.nike
+            p= item.nike_size 
             p= "cost: $"+item.cost.toFixed(2)
             div.row
                 each prop, i in Object.keys(item)
